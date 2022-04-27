@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import { STAFFS } from './shared/staffs.jsx';
+import { STAFFS } from './shared/staffs';
 import StaffList from './components/StaffListComponents';
 import './App.css';
 import dateFormat from 'dateformat';
@@ -23,7 +23,7 @@ class App extends Component {
             <NavbarBrand href="/">Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
           </div>
         </Navbar>
-       
+       <StaffList staff={this.state.staffs} />
       </div>
     );
   }
