@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import { STAFFS } from './shared/staffs';
 import StaffList from './components/StaffListComponents';
+import { STAFFS } from './shared/staffs';
 import './App.css';
 import dateFormat from 'dateformat';
 
@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      
+      staffs: STAFFS
     };
   }
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
             <NavbarBrand href="/">Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
           </div>
         </Navbar>
-       <StaffList staff={this.state.staffs} />
+       <StaffList staffs={this.state.staffs} />
       </div>
     );
   }
